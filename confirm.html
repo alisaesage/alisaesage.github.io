@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-46PC67S5PN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-46PC67S5PN');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    background: #07080d;
+    color: rgba(160, 165, 180, 0.6);
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+</style>
+</head>
+<body>
+<div id="msg">...</div>
+<script>
+  const token = new URLSearchParams(window.location.search).get('token');
+  fetch('https://script.google.com/macros/s/AKfycbys7jnM9zQ_B6qirWBiqc8baRN6T7o9mPuW0uclyuvmiQMxVW-4fCnemZ5-9n6zzwEX3A/exec?token=' + encodeURIComponent(token))
+    .then(r => r.json())
+    .then(data => { document.getElementById('msg').textContent = data.ok ? 'Confirmed.' : 'Error.'; })
+    .catch(() => { document.getElementById('msg').textContent = 'Error.'; });
+</script>
+</body>
+</html>

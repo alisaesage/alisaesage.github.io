@@ -876,50 +876,11 @@
     <div class="newsletter-label">Newsletter</div>
     <div class="access-denied">
       <div class="access-label">Access Denied</div>
-      <div class="access-form" id="access-form">
-        <input class="access-input" type="email" id="access-email" placeholder="your@email.com"
-          autocomplete="email" spellcheck="false" autocapitalize="off"
-          onkeydown="if(event.key==='Enter') handleSubmit()" />
-        <button class="access-submit" id="access-btn" onclick="handleSubmit()">Request</button>
-      </div>
-      <div class="access-success" id="success-msg">Success.</div>
-      <div class="access-error" id="error-msg">Error. Try again later.</div>
+      <a class="access-submit" href="https://alisaesage.substack.com/subscribe"
+         target="_blank" rel="noopener"
+         style="text-decoration:none;display:inline-block;">Subscribe</a>
     </div>
   </div>
-
-  <!-- MODAL 1: metadata -->
-  <div class="modal-overlay" id="modal-meta">
-    <div class="modal-box">
-      <div class="modal-label">Access Request</div>
-      <div class="modal-field">
-        <label class="modal-field-label">Full Name</label>
-        <input class="modal-input" id="meta-name" type="text" placeholder="" autocomplete="name" spellcheck="false" />
-      </div>
-      <div class="modal-field">
-        <label class="modal-field-label">What brings you here?</label>
-        <input class="modal-input" id="meta-signal" type="text" placeholder="e.g. a specific publication or news piece" spellcheck="false" />
-      </div>
-      <div class="modal-field">
-        <label class="modal-field-label">Primary Interest</label>
-        <input class="modal-input" id="meta-interest" type="text" placeholder="e.g. exploit research, AI, productivity" spellcheck="false" />
-      </div>
-      <div class="modal-actions">
-        <button class="access-submit" id="meta-cancel" onclick="closeModal()">Cancel</button>
-        <button class="access-submit" id="meta-submit" onclick="submitMeta()">Proceed</button>
-      </div>
-      <div class="access-error" id="modal-error" style="margin-top:16px">Error. Try again later.</div>
-    </div>
-  </div>
-
-  <!-- MODAL 2: confirmation -->
-  <div class="modal-overlay" id="modal-confirm">
-    <div class="modal-box">
-      <div class="modal-confirm-text">One more step — check your email to confirm your subscription.</div>
-      <button class="access-submit" onclick="closeConfirm()">OK</button>
-    </div>
-  </div>
-
-  <script src="js/newsletter-submit.js?v=20260808"></script>
 
   <footer>
     <div class="footer-name">Alisa Esage Шевченко</div>
